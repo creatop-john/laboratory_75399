@@ -88,12 +88,16 @@ AOS.init({
 const content = document.querySelector('.main-content');
 scrollnav.init(content, {
     sections: '.fz-B',
-    //debug: true,
     onInit: function() {
         $('.scroll-nav').addClass('active');
+
+        $('.scroll-nav__list').before('<a href="company-list.html" class="btn-back"><div class="icon-back"><i></i><i></i><i></i></div><span>回上一頁</span></a><hr>');
+
+
         //console.log('選單已建立');
         //$('.scroll-nav__item').eq(0).addClass('scroll-nav__item--active');
     }
+
 });
 
 
