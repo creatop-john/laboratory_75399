@@ -12,14 +12,14 @@
     <meta property="og:description" content="">
     <link rel="icon" href="img/favicon.png">
 
-    
+    <!--樣式區-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Yantramanav:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
 </head>
 
 <body class="article-list">
-
+<!-- start header.html-->
 <header class="header">
     <a href="index.html" class="logo"></a>
     <div class="function-bar">
@@ -36,7 +36,12 @@
                     <i class="icon icon-39"></i>
                 </div>
                 <input type="search" placeholder="尋找新創" maxlength="20" id="headerSearch" class="closeOptions">
-                
+                <!-- <select name="" id="" class="closeOptions">
+                    <option value="0">類別選項1</option>
+                    <option value="1">類別選項2</option>
+                    <option value="2">類別選項3</option>
+                    <option value="3">類別選項4</option>
+                </select> -->
                 <button class="closeOptions">
                     <i class="icon icon-36"></i>
                 </button>
@@ -55,8 +60,8 @@
     </div>
 
 </header>
-
-
+<!-- end header.html-->
+<!-- start nav.html-->
 <nav class="nav">
     <div class="nav-wrap">
         <div class="main-nav">
@@ -79,9 +84,9 @@
 
 
 </nav>
+<!-- end nav.html-->
 
-
-    
+    <!--公司介紹頁-->
     <div class="page">
 
         <div class="layout-cover" data-aos="fade-down">
@@ -98,21 +103,30 @@
             <div id="stars3"></div>
             <div class="company-header">
                 <span class="fz-B hide">頁首</span>
-                <div class="logo-holder default" data-aos="zoom-in-up">
+                <!--有公司logo時-->
+                <div class="logo-holder" data-aos="zoom-in-up">
+                    <img src="img/company/demo-co-logo.png" alt="">
+                </div>
+                <!--沒有公司logo時，預設-->
+                <!--
+                <div class="logo-holder default " data-aos="zoom-in-up">
                     <img src="img/default/logo-default.svg" alt="">
                 </div>
+                -->
                 <h1 class="title fz-A" data-aos="fade-up" data-aos-delay="50">曙客股份有限公司</h1>
                 <h3 class="title-en fz-D" data-aos="fade-up" data-aos-delay="100">Zoek Inc.</h3>
                 <div class="label-holder rich" data-aos="fade-up" data-aos-delay="150">
+                    <!--產業類別 / 標籤皆為相同樣式，就是篩選-->
+                    <a class="label">產業類別</a>
                     <a class="label">Auto Tech</a>
                     <a class="label">Electric Vehicle</a>
                     <a class="label">Mobile App</a>
                     <a class="label">Auto Tech</a>
                 </div>
                 <div class="update-info">
-                    <span data-aos="fade-up" data-aos-delay="200">商業服務 Business Services</span>
+
                     <span data-aos="fade-up" data-aos-delay="250">瀏覽次數 : 3</span>
-                    <span data-aos="fade-up" data-aos-delay="300">分享按鈕</span>
+                    <span data-aos="fade-up" data-aos-delay="300"><i class="icon icon-42"></i></span>
                 </div>
 
             </div>
@@ -123,34 +137,40 @@
                     <h3 class="title fz-C">最新募資輪</h3>
                     <strong>A 輪</strong>
                 </div>
-                
+
                 <div class="item-card" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="title fz-C">公司創立年份</h3>
-                    <strong class="num-count-animate" id="count2" data-id="count2" data-count="2007" data-time="3500">2007</strong>
+                    <h3 class="title fz-C">最近募資年份</h3>
+                    <strong class="num-count-animate" id="count2" data-id="count2" data-count="2018" data-time="3500">2018</strong>
                 </div>
-                <div class="item-card" data-aos="fade-up" data-aos-delay="250">
-                    <h3 class="title fz-C">員工人數 <span class="remark">(位)</span></h3>
-                    <strong class="num-count-animate" id="count3" data-id="count3" data-count="36" data-time="3000">36</strong>
-                </div>
+
             </div>
 
             <div class="company-body" data-aos="fade-up" data-aos-delay="100">
                 <section class="product-intro">
-                    <h3 class="title fz-B" data-aos="fade-up" data-aos-delay="100">產品與服務</h3>
-                    <div data-aos="fade-up" data-aos-delay="200">
-                        <p>FunNow 是一個來自荷蘭的創業團隊。團隊組成很多元，來自西方一流的百大企業，受過歐美教育與職場洗禮，也擁有豐富的台灣在地經驗。最初的成員們都在歐美旅居過，很習慣買 last-minute 的機票，很習慣說走就走的行程，走到哪玩到哪。『如果我們能將市場上所有休閒娛樂產業的閒置資源都整合在平台上，將空間資訊傳達給每一個人，結合金流一鍵完成，是不是就能幫助這世界更簡單更輕鬆？』於是有了 FunNow 的開始。我們希望：只要有空，可以不用計畫，即時訂，馬上
-                            GO。不再浪費寶貴的時間在排隊上。縮短購買流程，不再花時間電話預約。從歐洲回來，從台灣出發。我們是台灣新創，希望將 FunNow 帶到世界更多的地方</p>
-                    </div>
-                </section>
+                    <h3 class="title fz-B" data-aos="fade-up" data-aos-delay="100">公司簡介</h3>
 
-                <section>
-                    <h3 class="title fz-B" data-aos="fade-up" data-aos-delay="100">機構簡介與經歷</h3>
                     <ul class="table-ul" data-aos="fade-up" data-aos-delay="200">
+
                         <li>
                             <h6>公司簡介</h6>
                             <p>說走就走的行程，走到哪玩到哪。『如果我們能將市場上所有休閒娛樂產業的閒置資源都整合在平台上，將空間資訊傳達給每一個人，結合金流一鍵完成，是不是就能幫助這世界更簡單更輕鬆？』於是有了 FunNow 的開始。我們希望：只要有空，可以不用計畫，即時訂，馬上 GO。不再浪費寶貴的時間在排隊上。縮短購買流程，不再花
                             </p>
                         </li>
+                        <li>
+                            <h6>產品與服務</h6>
+                            <p>FunNow 是一個來自荷蘭的創業團隊。團隊組成很多元，來自西方一流的百大企業，受過歐美教育與職場洗禮，也擁有豐富的台灣在地經驗。最初的成員們都在歐美旅居過，很習慣買 last-minute 的機票，很習慣說走就走的行程，走到哪玩到哪。『如果我們能將市場上所有休閒娛樂產業的閒置資源都整合在平台上，將空間資訊傳達給每一個人，結合金流一鍵完成，是不是就能幫助這世界更簡單更輕鬆？』於是有了 FunNow 的開始。我們希望：只要有空，可以不用計畫，即時訂，馬上
+                                GO。不再浪費寶貴的時間在排隊上。縮短購買流程，不再花時間電話預約。從歐洲回來，從台灣出發。我們是台灣新創，希望將 FunNow 帶到世界更多的地方</p>
+                        </li>
+                    </ul>
+
+
+                </section>
+
+
+                <section>
+                    <h3 class="title fz-B" data-aos="fade-up" data-aos-delay="100">募資經歷</h3>
+                    <ul class="table-ul" data-aos="fade-up" data-aos-delay="200">
+
                         <li>
                             <h6>重要投資人</h6>
                             <p>SparkLabs Taipei, Alibaba Entrepreneurs Fund, CDIB Capital, Darwin Ventures, Accuvest Global Advisors</p>
@@ -159,28 +179,20 @@
                             <h6>重要實績客戶</h6>
                             <p>FunNow APP全球下載已經破百萬次，會員超過80萬人 獲18家媒體強力推薦，350,000+用戶好評 合作店家超過 3,000 家餐廳、酒吧、旅館、按摩 SPA、美甲美睫、美髮沙龍 2019年前進吉隆坡、東京 2020年併購馬來西亞餐廳預訂APP「TABLEAPP」</p>
                         </li>
-                        <li>
-                            <h6>獲獎紀錄</h6>
-                            <p>國際創業競賽SSW Taipei 2016前10強，獲以熙國際獎</p>
-                        </li>
-                        <li>
-                            <h6>參加過的加速器</h6>
-                            <p>SparkLabs</p>
-                        </li>
-
-                        <li>
-                            <h6>在台灣的核心業務</h6>
-                            <p>營運總部</p>
-                        </li>
-                        <li>
-                            <h6>創辦人</h6>
-                            <p>陳庭寬</p>
-                        </li>
-
-
-
                     </ul>
                 </section>
+
+                <section>
+                    <h3 class="title fz-B" data-aos="fade-up" data-aos-delay="100">獲獎紀錄</h3>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-wrap">
+                            <p>國際創業競賽SSW Taipei 2016前10強，獲以熙國際獎</p>
+                        </div>
+
+                    </div>
+                </section>
+
+
 
                 <section>
                     <h3 class="title fz-B" data-aos="fade-up" data-aos-delay="100">基本資料</h3>
@@ -206,6 +218,27 @@
                             <h6>公司官網</h6>
                             <p><a href="https://www.myfunnow.com/" target="_blank">https://www.myfunnow.com/</a></p>
                         </li>
+                        <li>
+                            <h6>員工人數</h6>
+                            <p>36</p>
+                        </li>
+                        <li>
+                            <h6>創辦人</h6>
+                            <p>陳庭寬</p>
+                        </li>
+                        <li>
+                            <h6>成立年份</h6>
+                            <p>2007</p>
+                        </li>
+                        <li>
+                            <h6>參加過的加速器</h6>
+                            <p>SparkLabs</p>
+                        </li>
+
+                        <li>
+                            <h6>在台灣的核心業務</h6>
+                            <p>營運總部</p>
+                        </li>
 
 
                     </ul>
@@ -224,8 +257,8 @@
 
     </div>
 
-
-
+<!-- start footer.html-->
+<!--footer-->
 
 <footer class="footer">
     <div class="container">
@@ -241,17 +274,17 @@
     </div>
 
 </footer>
-
-
-
-
-
+<!-- end footer.html-->
+<!-- start js.html-->
+<!----------------------------------------------->
+<!--------------------- END --------------------->
+<!----------------------------------------------->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha512-tnNM6PPNOVfZ5sGPw6hThCrcUBeqt2mVEk3EAj8tCtuMHqbuVm5/HsZagrr8W2aaFE+6rKIByGwQbEnmodrYVg==" crossorigin="anonymous"></script>
 <script src="./js/main.js"></script>
-
+<!-- end js.html-->
 
 </body>
 
