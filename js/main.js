@@ -86,17 +86,13 @@ AOS.init({
 
 //公司簡介頁面快速導覽
 const content = document.querySelector('.main-content');
+const insertTarget = document.querySelector('.scrollnavhere');
 scrollnav.init(content, {
     sections: '.fz-B',
-    onInit: function() {
-        $('.scroll-nav').addClass('active');
+    insertTarget: insertTarget,
+    insertLocation: 'append',
+    speed: 1000
 
-        $('.scroll-nav__list').before('<a href="company-list.html" class="btn-back"><div class="icon-back"><i></i><i></i><i></i></div><span>回上一頁</span></a><hr>');
-
-
-        //console.log('選單已建立');
-        //$('.scroll-nav__item').eq(0).addClass('scroll-nav__item--active');
-    }
 
 });
 
