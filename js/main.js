@@ -267,6 +267,14 @@ $(function() {
     })
 
 
+    $('.social-share').on('click', function(e) {
+        $body.addClass('share-show');
+    })
+    $('.close-share').on('click', function(e) {
+        $body.removeClass('share-show');
+    })
+
+
 
 
 })
