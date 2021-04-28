@@ -4709,6 +4709,12 @@ button,
   }
 }
 
+@media (min-width: 740px) and (max-width: 979px) {
+  .item-article-pool {
+    padding: 30px 8vw;
+  }
+}
+
 @media (min-width: 980px) {
   .item-article-pool {
     width: 70%;
