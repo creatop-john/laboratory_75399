@@ -1,0 +1,91 @@
+.footer {
+    background-color: #474747;
+    color: #858585;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 10;
+    @include lg {
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+    }
+    a {
+        color: #E3E3E3;
+        transition: all .35s ease;
+        &:hover {
+            color: #fff;
+        }
+    }
+    .container {
+        display: flex;
+        align-items: center;
+        @include xs_md {
+            flex-direction: column;
+        }
+        @include md {
+            //align-items: center;
+            justify-content: space-between;
+        }
+    }
+    .copyright {
+        font-size: 12px;
+        font-family: $font-en;
+        @include xs_md {
+            margin-top: 6vw;
+        }
+        @include xl {
+            font-size: 13px;
+        }
+        @include xxl {
+            font-size: 14px;
+        }
+        @include xxxl {
+            font-size: 16px;
+        }
+    }
+    .link-area {
+        @include xs_md {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        a {
+            @include xs_md {
+                display: block;
+                text-align: center;
+                width: 100%;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+            @include md {
+                margin: 0 0.5em;
+                font-size: .75em;
+            }
+            @include lg {
+                margin: 0 0.5em;
+                font-size: .8125em;
+            }
+            @include xl {
+                font-size: .875em;
+                margin: 0 0.75em;
+            }
+            @include xxl {
+                font-size: .9375em;
+            }
+            @include xxxl {
+                font-size: 1em;
+            }
+        }
+    }
+    .footer-logo {
+        @include xs_md {
+            margin-bottom: 6vw;
+        }
+        @include md {
+            width: 15vw;
+        }
+        @include xxl {
+            width: 13.4vw;
+        }
+    }
+}

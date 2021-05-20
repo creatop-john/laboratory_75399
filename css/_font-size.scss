@@ -1,0 +1,45 @@
+.fz-A {
+    //56px
+    font-size: 2em;
+    @include xxl {
+        font-size: 3em;
+    }
+    @include xxxl {
+        font-size: 3.5em;
+    }
+}
+
+.fz-B {
+    //32px
+    font-size: 1.5em;
+    &.hide {
+        font-size: 0;
+    }
+    @include xxxl {
+        font-size: 2em;
+    }
+}
+
+.fz-C {
+    //22px
+    font-size: 1em;
+    @include xl {
+        font-size: 1.25em;
+    }
+    @include xxxl {
+        font-size: 1.375em;
+    }
+}
+
+.fz-D {
+    //20px
+    font-size: 1em;
+    @include xl {
+        font-size: 1.25em;
+    }
+}
+
+.fz-E {
+    //18px
+    font-size: 1.125em;
+}

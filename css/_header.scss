@@ -1,0 +1,278 @@
+.header {
+    background-color: #fff;
+    //border: 1px solid #000;
+    width: 100%;
+    height: 60px;
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    //padding-left: $edge-mobile / 2;
+    padding-right: 0;
+    justify-content: space-between;
+    box-shadow: $card-shadow;
+    top: 0;
+    @include md {
+        height: 72px;
+        padding-left: $edge-tablet / 2;
+        padding-right: $edge-tablet / 2;
+    }
+    @include lg {
+        padding-left: $edge-normal;
+        padding-right: $edge-normal;
+    }
+    @include xxxl {
+        height: 90px;
+    }
+    .logo {
+        display: block;
+        //background: url('../img/startuptaiwan.svg') no-repeat left center;
+        background: url('../img/typography.svg') no-repeat left center;
+        background-size: contain;
+        height: 100%;
+        width: 35vw;
+        //border: 1px solid #000;
+        position: relative;
+        transition: all .4s ease;
+        @include xs_md {
+            margin: 0 auto;
+        }
+        @include xs_md {
+            max-width: 160px;
+        }
+        @include sm {
+            width: 20vw;
+        }
+        @include md {
+            //width: 25vw;
+            width: 16vw;
+        }
+        @include lg {
+            width: 13.5vw;
+        }
+        @include xl {
+            width: 11vw;
+        }
+        @include xxl {
+            width: 9.5vw;
+        }
+        @include xxxl {
+            width: 9vw;
+        }
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-bottom: 20%;
+        }
+    }
+}
+
+.function-bar {
+    display: flex;
+    flex-direction: row-reverse;
+    @include xs_md {
+        position: absolute;
+        width: 100%;
+        pointer-events: none;
+        left: 0;
+        top: 0;
+    }
+}
+
+.btn-before-login,
+.btn-after-login {
+    width: $height-header-xs;
+    position: relative;
+    cursor: pointer;
+    pointer-events: auto;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-bottom: 100%;
+        box-sizing: border-box;
+    }
+    .icon {
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        overflow: hidden;
+        transition: all .4s ease;
+        @include xl {
+            width: 72%;
+            height: 72%;
+        }
+        &:before {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.btn-before-login {
+    .icon {
+        border: 1.5px solid #000;
+        @include xxl {
+            border: 2px solid #000;
+        }
+        &:before {
+            width: 100%;
+            height: 100%;
+            transition: transform .4s ease;
+            @include iconPos(61);
+        }
+    }
+}
+
+.btn-after-login {
+    .icon {
+        background-color: $color-main;
+        background: linear-gradient(-45deg, #2AF598, #15CACA, #009EFD, #0022FD);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        &:before {
+            @include iconPos(59);
+            transition: transform .4s ease;
+        }
+    }
+}
+
+.search-icon,
+.nav-toggle,
+.mb-toggle {
+    width: $height-header-xs;
+    height: $height-header-xs;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease;
+    pointer-events: auto;
+    @include md {
+        width: $height-header-md;
+        height: $height-header-md;
+    }
+    @include xxxl {
+        width: $height-header-xxxl;
+        height: $height-header-xxxl;
+    }
+}
+
+.nav-toggle {
+    margin-left: 5px;
+    .hamburger {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: transform .35s ease, height .35s ease;
+        //border: 1px solid #000;
+        span {
+            display: block;
+            width: 21px;
+            height: 2px;
+            background-color: #000;
+            //margin-bottom: 8px;
+            margin-bottom: 3px;
+            transition: all .35s ease;
+            border-radius: 2px;
+            &:nth-of-type(2) {
+                width: 13px;
+                background-color: #000;
+                margin-left: 10px;
+                opacity: 0;
+            }
+            &:nth-of-type(3) {
+                margin-bottom: 0;
+                width: 16px;
+                margin-right: 5px;
+            }
+        }
+    }
+    @include xs_md {
+        margin-left: 0;
+        left: 0;
+        position: absolute;
+    }
+    @include md {
+        display: none !important;
+    }
+}
+
+.nav-open {
+    @include xs_xl {
+        overflow: hidden;
+        .hamburger {
+            //border: 1px solid #000;
+            span {
+                margin-bottom: 8px;
+                &:nth-of-type(1) {
+                    transform: translate(0, 10px) rotate(45deg);
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                }
+                &:nth-of-type(3) {
+                    width: 21px;
+                    margin-right: 0;
+                    transform: translate(0, -10px) rotate(-45deg)
+                }
+            }
+        }
+    }
+    @include xs_md {
+        .logo {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+        .search-wrap {
+            transform: translateY(-100%);
+            opacity: 0;
+            transition-delay: .05s;
+        }
+        .header {
+            background-color: transparent;
+            box-shadow: none;
+        }
+        .btn-before-login,
+        .btn-after-login {
+            transform: translateY(-100%);
+            opacity: 0;
+        }
+    }
+}
+
+.lang {
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    display: flex;
+    transition: all .35s ease;
+    display: none;
+    a {
+        font-size: .75em;
+        display: flex;
+        width: 50%;
+        align-items: center;
+        width: 3em;
+        text-align: center;
+        justify-content: center;
+        color: #848484;
+        transform: translateZ(0);
+        transition: all .35s ease;
+        &+a {
+            border-left: 1px solid $color-border;
+        }
+        @include xl {
+            &:hover {
+                color: #000;
+                font-weight: bold;
+            }
+        }
+    }
+}

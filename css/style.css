@@ -3412,6 +3412,7 @@ button,
   transform: translate(-50%, -50%);
   border-radius: 50%;
   overflow: hidden;
+  transition: all .4s ease;
 }
 
 @media (min-width: 1100px) {
@@ -3429,7 +3430,13 @@ button,
 }
 
 .btn-before-login .icon {
-  border: 2px solid #000;
+  border: 1.5px solid #000;
+}
+
+@media (min-width: 1500px) {
+  .btn-before-login .icon {
+    border: 2px solid #000;
+  }
 }
 
 .btn-before-login .icon:before {
@@ -3450,6 +3457,7 @@ button,
 .btn-after-login .icon:before {
   background-size: auto 100%;
   background-position: 84.06% 0;
+  transition: transform .4s ease;
 }
 
 .search-icon,
@@ -3781,7 +3789,6 @@ button,
     overflow: hidden;
     background-color: #fff;
     transform: translateY(50px);
-    height: 100vh;
     background-color: #fff;
   }
 }
@@ -4029,6 +4036,14 @@ button,
   }
 }
 
+@media (min-width: 0) and (max-width: 739px) {
+  .nav-mb.before-login {
+    background: linear-gradient(-45deg, #2AF598, #15CACA, #009EFD, #0022FD);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+}
+
 .nav-mb.before-login .nav-wrap {
   height: 100%;
   display: flex;
@@ -4069,7 +4084,9 @@ button,
 @media (min-width: 0) and (max-width: 739px) {
   .nav-mb.before-login .main-nav a.login {
     font-size: 1.25em;
-    line-height: 60px;
+    line-height: 55px;
+    background: linear-gradient(-45deg, #fff, #eee, #fff, #ddd);
+    color: #222;
   }
 }
 
@@ -4086,6 +4103,13 @@ button,
   padding-bottom: 0.5em;
 }
 
+@media (min-width: 0) and (max-width: 739px) {
+  .nav-mb.before-login .main-nav a.register span {
+    border-bottom: 1px dashed #fff;
+    color: #fff;
+  }
+}
+
 @media (min-width: 0) and (max-width: 739px) and (orientation: landscape) {
   .nav-mb.after-login .nav-wrap {
     display: flex;
@@ -4100,14 +4124,32 @@ button,
   }
 }
 
+@media (min-width: 740px) {
+  .nav-mb.after-login .main-nav a span {
+    transition: all .35s ease;
+  }
+  .nav-mb.after-login .main-nav a:hover span {
+    color: #0062FF;
+  }
+  .nav-mb.after-login .main-nav a.logout:hover span {
+    color: #d64c4c;
+  }
+  .nav-mb.after-login .main-nav .disabled:hover span {
+    color: #ccc;
+  }
+}
+
 .mb-ad {
-  background-color: #efefef;
   display: none;
 }
 
 @media (min-width: 0) and (max-width: 739px) and (orientation: portrait) {
   .mb-ad {
     display: flex;
+    background: url("../img/login-ad.png") no-repeat center center;
+    background-size: contain;
+    width: 90%;
+    margin: 50px auto 0;
   }
 }
 
@@ -4115,7 +4157,7 @@ button,
   content: "";
   display: block;
   width: 100%;
-  padding-bottom: 80%;
+  padding-bottom: 100%;
 }
 
 .mb-open .nav-mb {
@@ -4200,10 +4242,20 @@ button,
     background-color: transparent;
     box-shadow: none;
   }
+  .mb-open .btn-after-login .icon,
+  .mb-open .btn-before-login .icon {
+    background-color: #fff;
+    border-color: transparent;
+  }
+  .mb-open .btn-after-login .icon:before,
   .mb-open .btn-before-login .icon:before {
-    transform: scale(0.6);
+    transform: scale(0.5);
     background-size: auto 100%;
     background-position: 55.07% 0;
+  }
+  .mb-open .btn-after-login .icon {
+    background-color: #fff;
+    background: linear-gradient(-45deg, #fff, #f8f8f8, #fff, #f8f8f8);
   }
 }
 

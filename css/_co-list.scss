@@ -1,0 +1,431 @@
+.logo-holder {
+    position: relative;
+    //border: 1px solid #000;
+    &:before {
+        content: "";
+        display: block;
+        padding-bottom: 64%;
+        width: 100%;
+    }
+    .logo {
+        position: absolute;
+        width: 60%;
+        height: 90%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        //border: 1px solid darkcyan;
+        overflow: hidden;
+        // &:before {
+        //     content: "";
+        //     display: block;
+        //     padding-bottom: 80%;
+        //     width: 100%;
+        // }
+        img {
+            display: block;
+            object-fit: scale-down;
+            transition: transform .35s ease;
+            //border: 1px solid #000;
+            @include xl {
+                transform: scale(0.9);
+            }
+        }
+    }
+}
+
+.item-company {
+    .img-holder {
+        overflow: hidden;
+        position: relative;
+        border-radius: $radius;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        &:before {
+            content: "";
+            display: block;
+            padding-bottom: 125.8%;
+            width: 100%;
+        }
+    }
+    @include xs_sm {
+        padding-bottom: 15px !important;
+    }
+    &.recommend {
+        position: relative;
+        overflow: hidden;
+        &:before {
+            position: absolute;
+            content: "";
+            display: block;
+            left: 8.75%;
+            top: 0;
+            width: 11%;
+            padding-bottom: 20%;
+            background-color: #000;
+            pointer-events: none;
+            // background: linear-gradient(-45deg, #2AF598, #15CACA, #009EFD, #0022FD);
+            // background-size: 200% 200%;
+            background: url('../img/star-label.svg') no-repeat top left;
+            background-size: contain;
+            // clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            //animation: gradient 10s ease infinite;
+            z-index: 2;
+            @include xs_sm {
+                width: 8%;
+                right: 8.75%;
+                left: auto;
+            }
+        }
+    }
+    // .logo-holder {
+    //     position: relative;
+    //     &:before {
+    //         content: "";
+    //         display: block;
+    //         padding-bottom: 64%;
+    //         width: 100%;
+    //     }
+    //     .logo {
+    //         position: absolute;
+    //         width: 60%;
+    //         height: 80%;
+    //         border: 1px dashed #eee;
+    //         left: 50%;
+    //         top: 50%;
+    //         transform: translate(-50%, -50%);
+    //         display: flex;
+    //         align-items: center;
+    //         justify-content: center;
+    //         // &:before {
+    //         //     content: "";
+    //         //     display: block;
+    //         //     padding-bottom: 80%;
+    //         //     width: 100%;
+    //         // }
+    //         img {
+    //             object-fit: contain;
+    //             transition: transform .35s ease;
+    //         }
+    //     }
+    // }
+    .info-holder {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .field {
+            color: #989898;
+            display: block;
+            font-size: .75em;
+            white-space: nowrap;
+            @include lg_xxl {
+                font-size: 11px;
+            }
+        }
+        .value {
+            display: block;
+            font-size: .9375em;
+            font-weight: normal;
+            font-family: $font-en;
+            line-height: 20px;
+            vertical-align: middle;
+            white-space: nowrap;
+            @include xxl {
+                font-size: .9375em;
+            }
+            @include xxxl {
+                font-size: 1em;
+            }
+        }
+        li {
+            flex: auto;
+            position: relative;
+            &:first-of-type {
+                .value {
+                    font-family: $font-tw;
+                    font-size: .8125em;
+                    @include xxl {
+                        font-size: .875em;
+                    }
+                    @include xxxl {
+                        font-size: .9375em;
+                    }
+                }
+            }
+        }
+    }
+    .co-name-en {
+        font-size: 12px;
+        font-family: $font-en;
+        background-color: #000;
+        line-height: 1.25em;
+        padding: 0.25em 1em 0.25em 1.5em;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: #fff;
+    }
+    .co-name {
+        font-family: $font-tw;
+        font-weight: bold;
+        font-size: 1.125rem;
+        margin-top: 1em;
+        margin-bottom: 0.25em;
+        line-height: 1.5em;
+        height: 3em;
+        display: block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        @include xxxl {
+            font-size: 1.25rem;
+        }
+    }
+    .co-logo {
+        img {
+            object-fit: contain;
+            height: 20px;
+            width: auto;
+        }
+    }
+    p {
+        @extend %BOX_P;
+    }
+    // .label-holder { 
+    //     @extend %IDX_label;
+    // }
+}
+
+.list-a {
+    @include xs_sm {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row-reverse;
+        .logo-holder {
+            width: 35%;
+        }
+        .text-holder {
+            width: 65%;
+            padding-right: 0 !important;
+        }
+        .info-holder {
+            width: 100%;
+            flex-wrap: wrap;
+            /*background: linear-gradient(to bottom, #efefef 0%, #ddd 30%);*/
+            &:before {
+                content: "";
+                display: block;
+                border-top: 1px dotted $color-border;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            // li {
+            //     text-align: center;
+            // }
+        }
+        .co-name {
+            height: auto !important;
+            padding-bottom: 0.25em;
+        }
+        p {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+.company-list {
+    background-color: $color-bg;
+    padding-top: 70px;
+    @include md {
+        padding-top: 120px;
+    }
+    @include lg {
+        padding-top: 100px;
+    }
+}
+
+.item-company-pool {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 5vw;
+    .item-company {
+        background-color: #fff;
+        border-radius: $radius;
+        box-shadow: $card-shadow;
+        padding-bottom: 25px;
+        margin-bottom: $edge-mobile;
+        width: 100%;
+        @include md_lg {
+            width: 48%;
+            margin: 0 0 30px 4%;
+            &:nth-of-type(2n+1) {
+                margin-left: 0;
+            }
+        }
+        @include lg_xl {
+            width: 31%;
+            margin: 0 0 30px 3.5%;
+            &:nth-of-type(3n+1) {
+                margin-left: 0;
+            }
+        }
+        @include xl_xxl {
+            width: 23.125%;
+            margin: 0 0 30px 2.5%;
+            &:nth-of-type(4n+1) {
+                margin-left: 0;
+            }
+        }
+        @include xl {
+            &:hover {
+                .logo-holder {
+                    .logo {
+                        img {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+        @include xxl {
+            width: 18.5%;
+            margin: 0 0 30px 1.875%;
+            &:nth-of-type(5n+1) {
+                margin-left: 0;
+            }
+        }
+        .info-holder,
+        .text-holder {
+            padding: 0 8.75%;
+        }
+    }
+}
+
+.type-list {
+    .item-company {
+        @include lg {
+            width: 100%;
+            margin: 0;
+            box-shadow: none;
+            background-color: transparent;
+            border-bottom: 1px solid $color-border;
+            a {
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+            }
+            .logo-holder {
+                width: 15%;
+            }
+            .text-holder {
+                padding: 0;
+                display: flex;
+                min-width: 60%;
+                max-width: 60%;
+                width: 60%;
+                align-items: center;
+                .co-name {
+                    margin: 0;
+                    height: auto;
+                    flex: auto;
+                    width: 30%;
+                    min-width: 30%;
+                    max-width: 30%;
+                }
+                p {
+                    display: block;
+                    flex: auto;
+                    width: 70%;
+                    min-width: 70%;
+                    max-width: 70%;
+                }
+            }
+            .info-holder {
+                padding: 0;
+            }
+        }
+    }
+}
+
+.search-area {
+    //border: 1px solid #000;
+    padding-top: 3.8vw;
+    padding-bottom: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    @include xs_md {
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
+    .search-bar {
+        max-width: 640px;
+        width: 80%;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        input,
+        select,
+        button {
+            flex: auto;
+            @include lg {
+                height: 50px;
+            }
+            @include xxxl {
+                height: 55px;
+            }
+        }
+        input {
+            background-color: #fff;
+            font-size: 1em;
+            font-weight: bold;
+            padding-left: 0.75em;
+            @include xl {
+                font-size: 1.125em;
+            }
+            @include xxl {
+                font-size: 1.25em;
+            }
+            @include xxxl {
+                font-size: 1.375em;
+            }
+        }
+    }
+    .label-holder {
+        margin-top: 30px;
+        max-width: 640px;
+    }
+}
+
+.search-result {
+    text-align: center;
+    padding-bottom: 25px;
+    @include lg {
+        padding-bottom: 35px;
+    }
+    p {
+        color: #666;
+    }
+    strong {
+        font-weight: bold;
+        margin: 0 0.5em;
+        color: #000;
+    }
+}
+
+.StartupAdvancedSearch {
+    padding-top: 25px;
+    .ant-form-item-control-input-content {
+        .ant-btn-primary {
+            text-shadow: none;
+            box-shadow: none;
+        }
+        .submit {}
+    }
+}

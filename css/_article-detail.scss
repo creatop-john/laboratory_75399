@@ -1,0 +1,274 @@
+.article {
+    // @include xs_lg {
+    //     padding: $edge-mobile;
+    // }
+    // @include md_lg {
+    //     padding: 3vw $edge-tablet 5vw;
+    // }
+    // @include md {
+    //     margin-top: $height-header-md;
+    // }
+    // @include lg {
+    //     width: 70%;
+    //     margin-left: 30%;
+    //     padding-left: 7vw;
+    //     padding-right: 20vw;
+    // }
+    // @include xxxl {
+    //     margin-top: $height-header-xxxl;
+    // }
+}
+
+.article-header {
+    border-bottom: 1px solid #E6E6E6;
+    padding-top: 4.16vw;
+    @include lg {
+        padding-bottom: 2em;
+    }
+    .title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.social-share {
+    display: flex;
+    font-weight: bold;
+    cursor: pointer;
+    align-items: center;
+    i {
+        margin-right: 8px;
+        transition: all .35s ease;
+        &:before {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    @include xl {
+        &:hover {
+            i {
+                transform: scale(1.375);
+            }
+        }
+    }
+    // a {
+    //     display: block;
+    //     margin-right: 1em;
+    //     margin-top: 0.5em;
+    //     transition: all .35s ease;
+    //     &:last-of-type {
+    //         margin-right: 0;
+    //     }
+    // }
+}
+
+.article-body {
+    padding-bottom: 30px;
+    padding-top: 50px;
+    @include md_lg {
+        padding: 3vw 80px 5vw;
+        img {
+            width: calc(100% + 160px);
+            margin-left: -80px;
+        }
+    }
+    @include md {
+        padding-bottom: 5vw;
+    }
+    @include xxl {
+        font-size: 18px;
+    }
+    @include xxxl {
+        font-size: 22px;
+    }
+    p {
+        text-align: justify;
+        text-justify: distribute;
+        &+p {
+            margin-bottom: 1em;
+        }
+    }
+    hr {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #E6E6E6;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+        font-family: $font-tw;
+        font-weight: bold;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin-bottom: 10px;
+    }
+    h1 {
+        font-size: 2em;
+        line-height: 1.5em;
+    }
+    h2 {
+        font-size: 1.75em;
+        line-height: 1.5em;
+    }
+    h3 {
+        font-size: 1.5em;
+        line-height: 1.5em;
+    }
+    h4,
+    h5,
+    h6 {
+        font-size: 1.25em;
+    }
+    strong {
+        &+p {
+            margin-top: 10px;
+        }
+    }
+    img {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+        border-radius: $radius;
+    }
+    .source {
+        border: 1px solid #000;
+        color: #000;
+        font-size: .8125rem;
+        border-radius: 5px;
+        padding: .5em 1.5em .5em 4em;
+        margin-top: 2em;
+        position: relative;
+        overflow: hidden;
+        user-select: none;
+        -moz-user-select: none;
+        /* for Firefox */
+        -webkit-user-select: none;
+        /* for Chrome */
+        &::before {
+            content: "!";
+            width: 2.5em;
+            height: 100%;
+            font-size: 1.25em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            color: #000;
+            left: -2px;
+            top: 0;
+        }
+    }
+    ol {
+        counter-reset: level_1;
+        >li {
+            //list-style: decimal;
+            padding-left: 1.25em;
+            position: relative;
+            &:before {
+                counter-increment: level_1;
+                content: counter(level_1)".";
+                position: absolute;
+                left: 0;
+                font-family: $font-en;
+                font-weight: bold;
+                font-size: 1.125em;
+                // font-size: 4em;
+                // color: #E6E6E6;
+            }
+            >ol {
+                padding-bottom: 1em;
+                counter-reset: level_2;
+                >li {
+                    position: relative;
+                    padding-left: 1.5em;
+                    &:before {
+                        counter-increment: level_2;
+                        content: counter(level_2);
+                        position: absolute;
+                        left: 0;
+                        font-weight: normal;
+                        border: 1px solid #ccc;
+                        align-items: flex-end;
+                        color: #666;
+                        font-size: .9375em;
+                        width: 1.125em;
+                        height: 1.125em;
+                        line-height: 1.125em;
+                        top: 0.4em;
+                        display: flex;
+                        //align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.article-info {
+    //border: 1px solid #000;
+    @include xs_lg {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 30px;
+    }
+    // @include lg {
+    //     position: fixed;
+    //     width: 14vw;
+    //     right: 0;
+    //     top: 0;
+    //     height: 100vh;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    // }
+    .item {
+        @include xs_sm {
+            width: 50%;
+            margin-bottom: 15px;
+        }
+        @include xs_lg {
+            &.item-back {
+                width: 100%;
+                display: none;
+            }
+        }
+        @include md {
+            margin-bottom: 2em;
+        }
+        @include sm_lg {
+            width: 25%;
+            margin-bottom: 0;
+        }
+    }
+    .field {
+        display: block;
+        color: #A6A6A6;
+        font-size: .875em;
+        line-height: 1.5em;
+    }
+    .value {
+        display: block;
+        line-height: 1.5em;
+        font-weight: bold;
+        @include xxl {
+            font-size: 1.125em;
+        }
+    }
+    .scrollnavhere {
+        @include xs_lg {
+            display: none;
+        }
+    }
+}
