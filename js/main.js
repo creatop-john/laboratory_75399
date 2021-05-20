@@ -243,6 +243,14 @@ $(function() {
         $body.toggleClass('nav-open');
         return false;
     });
+    $('.btn-before-login').on('click', function() {
+        $body.toggleClass('mb-open');
+        return false;
+    });
+    $('.btn-after-login').on('click', function() {
+        $body.toggleClass('mb-open');
+        return false;
+    });
     $('.search-toggle').on('click', function() {
         $body.toggleClass('search-bar-show');
         $('#headerSearch').focus();
