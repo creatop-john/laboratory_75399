@@ -3432,6 +3432,7 @@ button,
 .btn-before-login .icon {
   border: 1.5px solid #000;
   font-size: 0;
+  box-sizing: content-box;
 }
 
 @media (min-width: 1500px) {
