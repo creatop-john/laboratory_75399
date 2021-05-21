@@ -3431,6 +3431,7 @@ button,
 
 .btn-before-login .icon {
   border: 1.5px solid #000;
+  font-size: 0;
 }
 
 @media (min-width: 1500px) {
@@ -3784,11 +3785,10 @@ button,
   .nav-mb {
     width: 100%;
     overflow-y: auto;
-    height: fill-available;
-    height: -webkit-fill-available;
     overflow: hidden;
     background-color: #fff;
     transform: translateY(50px);
+    height: 100vh;
     background-color: #fff;
   }
 }
@@ -3924,6 +3924,19 @@ button,
   }
 }
 
+.nav-mb .text-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 740px) {
+  .nav-mb .text-holder {
+    align-items: flex-end;
+  }
+}
+
 .nav-mb .avatar {
   background-color: #fff;
   width: 40%;
@@ -3988,16 +4001,29 @@ button,
   font-weight: bold;
   font-family: "Noto Sans TC", sans-serif;
   font-size: 1.5em;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 90%;
 }
 
 @media (min-width: 740px) {
   .nav-mb .name {
-    font-size: 1.375em;
+    font-size: 1.125em;
+    max-width: 8em;
+  }
+}
+
+@media (min-width: 1800px) {
+  .nav-mb .name {
+    font-size: 1.25em;
   }
 }
 
 .nav-mb .main-nav {
-  padding: 60px 30px 60px;
+  padding: 20px 30px 60px;
 }
 
 @media (min-width: 740px) {
@@ -4017,7 +4043,7 @@ button,
 }
 
 .nav-mb .label {
-  display: block;
+  display: inline-block;
   padding: 0.25em 1em;
   border-radius: 20px;
   line-height: 1.2em;
@@ -4124,15 +4150,41 @@ button,
   }
 }
 
-@media (min-width: 740px) {
-  .nav-mb.after-login .main-nav a span {
-    transition: all .35s ease;
+@media (min-width: 740px) and (min-width: 740px) {
+  .nav-mb.after-login .main-nav {
+    padding: 10px 0;
   }
-  .nav-mb.after-login .main-nav a:hover span {
+}
+
+@media (min-width: 740px) and (min-width: 1800px) {
+  .nav-mb.after-login .main-nav {
+    padding: 15px 0;
+  }
+}
+
+@media (min-width: 740px) and (min-width: 740px) {
+  .nav-mb.after-login .main-nav a {
+    padding: 0 20px;
+  }
+}
+
+@media (min-width: 740px) and (min-width: 1800px) {
+  .nav-mb.after-login .main-nav a {
+    padding: 0 25px;
+  }
+}
+
+@media (min-width: 740px) {
+  .nav-mb.after-login .main-nav a:hover {
+    background-color: #eee;
     color: #0062FF;
   }
   .nav-mb.after-login .main-nav a.logout:hover span {
     color: #d64c4c;
+  }
+  .nav-mb.after-login .main-nav:hover a {
+    transition-delay: 0s !important;
+    transition: none !important;
   }
   .nav-mb.after-login .main-nav .disabled:hover span {
     color: #ccc;
@@ -4218,6 +4270,50 @@ button,
 
 .mb-open .nav-mb a:nth-of-type(10) {
   transition-delay: 1s;
+}
+
+.mb-open .nav-mb .main-nav a {
+  transition: .25s ease !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(1) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(2) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(3) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(4) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(5) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(6) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(7) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(8) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(9) {
+  transition-delay: 0s !important;
+}
+
+.mb-open .nav-mb .main-nav a:nth-of-type(10) {
+  transition-delay: 0s !important;
 }
 
 @media (min-width: 0) and (max-width: 739px) {
