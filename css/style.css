@@ -2305,6 +2305,7 @@ body {
   line-height: 1.875;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 body {
@@ -4532,12 +4533,13 @@ button,
   }
 }
 
-.item-company.recommend {
+.item-company.recommend, .item-company.trusted {
   position: relative;
   overflow: hidden;
 }
 
-.item-company.recommend:before {
+.item-company.recommend:before, .item-company.trusted:before {
+  image-rendering: -webkit-optimize-contrast;
   position: absolute;
   content: "";
   display: block;
@@ -4547,17 +4549,27 @@ button,
   padding-bottom: 20%;
   background-color: #000;
   pointer-events: none;
-  background: url("../img/star-label.svg") no-repeat top left;
+  background: url("../img/recommend.png") no-repeat top left;
   background-size: contain;
   z-index: 2;
 }
 
 @media (min-width: 0) and (max-width: 575px) {
-  .item-company.recommend:before {
+  .item-company.recommend:before, .item-company.trusted:before {
     width: 8%;
     right: 8.75%;
     left: auto;
   }
+}
+
+.item-company.trusted:before {
+  background: url("../img/trusted.png") no-repeat top left;
+  background-size: contain;
+}
+
+.item-company.recommend.trusted:before {
+  background: url("../img/tnr.png") no-repeat top left;
+  background-size: contain;
 }
 
 .item-company .info-holder {
@@ -5020,13 +5032,15 @@ button,
   font-size: .8125em;
 }
 
-.recommend .company-header .logo-holder {
+.recommend .company-header .logo-holder,
+.trusted .company-header .logo-holder {
   background: linear-gradient(-72deg, #dedede, #ffffff 16%, #dedede 21%, #ffffff 24%, #454545 27%, #dedede 36%, #ffffff 45%, #ffffff 60%, #dedede 72%, #ffffff 80%, #dedede 84%, #a1a1a1);
   background-size: 300% 300%;
   animation: gradient 9s linear infinite;
 }
 
-.recommend .company-header .logo-holder:after {
+.recommend .company-header .logo-holder:after,
+.trusted .company-header .logo-holder:after {
   content: "";
   display: block;
   width: 97.5%;
@@ -5040,7 +5054,8 @@ button,
   border-radius: 50%;
 }
 
-.recommend .company-header .logo-holder + .fz-A:before {
+.recommend .company-header .logo-holder + .fz-A:before,
+.trusted .company-header .logo-holder + .fz-A:before {
   content: "";
   display: inline-block;
   vertical-align: middle;
@@ -5052,6 +5067,16 @@ button,
   background-size: contain;
   margin-top: -0.2em;
   z-index: 2;
+}
+
+.trusted .company-header .logo-holder + .fz-A:before {
+  background: url("../img/trusted.png") no-repeat center left;
+  background-size: contain;
+}
+
+.recommend.trusted .company-header .logo-holder + .fz-A:before {
+  background: url("../img/tnr.png") no-repeat center left;
+  background-size: contain;
 }
 
 .company-highlight {
