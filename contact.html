@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+<!-- start head.html-->
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STARTUP TAIWAN</title>
+<meta name="description" content="">
+<meta property="og:image" content="">
+<meta property="og:title" content="">
+<meta property="og:description" content="">
+<link rel="icon" href="img/favicon.png">
+
+<!--樣式區-->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Yantramanav:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./css/style.css">
+<!-- end head.html-->
+    <!--首頁情境圖專用-->
+    <link rel="stylesheet" type="text/css" href="./css/hero.css">
+</head>
+
+<body>
+<!-- start header.html-->
+<header class="header">
+    <a href="index.html" class="logo"></a>
+    <div class="function-bar">
+
+        <a class="btn-before-login">
+            <i class="icon"></i>
+        </a>
+        <!-- <div class="btn-after-login">
+            <i class="icon"></i>
+        </div> -->
+        <div class="nav-toggle" id="nav-toggle">
+            <div class="hamburger">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </div>
+        </div>
+        <div class="search-wrap">
+            <div class="search-bar scale">
+                <div class="close-search-bar">
+                    <i class="icon icon-39"></i>
+                </div>
+                <input type="search" placeholder="尋找新創" maxlength="20" id="headerSearch" class="closeOptions">
+                <!-- <select name="" id="" class="closeOptions">
+                    <option value="0">類別選項1</option>
+                    <option value="1">類別選項2</option>
+                    <option value="2">類別選項3</option>
+                    <option value="3">類別選項4</option>
+                </select> -->
+                <button class="closeOptions">
+                    <i class="icon icon-36"></i>
+                </button>
+
+            </div>
+            <a href="#" class="search-toggle">
+                <i class="icon icon-37"></i>
+            </a>
+
+        </div>
+
+
+        <div class="lang">
+            <a href="#">中</a>
+            <a href="#">EN</a>
+        </div>
+    </div>
+
+</header>
+<!-- end header.html-->
+<!-- start nav.html-->
+<nav class="nav">
+    <div class="nav-wrap">
+        <div class="main-nav">
+            <a href="company-list.html" class="active">
+                <span>台灣新創團隊</span>
+            </a>
+            <a href="article-list.html">
+                <span>產業訊息與情報</span>
+            </a>
+            <a href="contact.html">
+                <span>聯絡我們</span>
+            </a>
+            <!-- <a href="#">
+                <span>管考儀表板</span>
+            </a>
+            <a href="article.html" class="show-mobile">
+                <span>隱私權政策</span>
+            </a> -->
+
+        </div>
+        <div class="show-mobile">
+
+        </div>
+
+    </div>
+
+
+</nav>
+
+<nav class="nav-mb before-login">
+    <div class="nav-wrap">
+        <!--區塊A-->
+        <div class="mb-ad">
+
+        </div>
+        <!--區塊C-->
+        <div class="main-nav">
+            <a href="index-login.html" class="login">
+                <span>登入</span>
+            </a>
+            <a href="#" class="register">
+                <span>還不是會員?立刻註冊</span>
+            </a>
+
+        </div>
+    </div>
+</nav>
+<!-- end nav.html-->
+
+    <!--新創精選-->
+    <div class="page">
+
+        <div class="layout-cover" data-aos="fade-down">
+            <div class="cover" style="background-image: url(img/default/contact.jpg);">
+
+            </div>
+
+        </div>
+        <div class="layout-content no-sidebar contact">
+            <div class="section-header">
+                <div class="left">
+                    <h2 class="title fz-B">聯絡我們</h2>
+                    <p>請留下您的需求內容，我們將竭誠為您服務！</p>
+                </div>
+            </div>
+
+
+            <form action="" class="form">
+
+                <div class="form-section">
+
+                    <h3 class="form-header title fz-C">需求類型<em>*</em></h3>
+
+                    <ul class="form-body">
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">新創需求</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs1-1" name="fs1">
+                                        <label for="fs1-1">選項1及其說明文字選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs1-2" name="fs1">
+                                        <label for="fs1-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs1-3" name="fs1">
+                                        <label for="fs1-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs1-4" name="fs1">
+                                        <label for="fs1-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs1-5" name="fs1">
+                                        <label for="fs1-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs1-6" name="fs1">
+                                        <label for="fs1-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">資金需求</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs2-1" name="fs2">
+                                        <label for="fs2-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs2-2" name="fs2">
+                                        <label for="fs2-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs2-3" name="fs2">
+                                        <label for="fs2-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs2-4" name="fs2">
+                                        <label for="fs2-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs2-5" name="fs2">
+                                        <label for="fs2-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs2-6" name="fs2">
+                                        <label for="fs2-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">辦公室需求</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs3-1" name="fs3">
+                                        <label for="fs3-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs3-2" name="fs3">
+                                        <label for="fs3-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs3-3" name="fs3">
+                                        <label for="fs3-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs3-4" name="fs3">
+                                        <label for="fs3-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs3-5" name="fs3">
+                                        <label for="fs3-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs3-6" name="fs3">
+                                        <label for="fs3-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">輔導需求</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs4-1" name="fs4">
+                                        <label for="fs4-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs4-2" name="fs4">
+                                        <label for="fs4-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs4-3" name="fs4">
+                                        <label for="fs4-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs4-4" name="fs4">
+                                        <label for="fs4-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs4-5" name="fs4">
+                                        <label for="fs4-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs4-6" name="fs4">
+                                        <label for="fs4-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">媒合需求</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs4-1" name="fs5">
+                                        <label for="fs5-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs5-2" name="fs5">
+                                        <label for="fs5-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs5-3" name="fs5">
+                                        <label for="fs5-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs5-4" name="fs5">
+                                        <label for="fs5-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs5-5" name="fs5">
+                                        <label for="fs5-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs5-6" name="fs5">
+                                        <label for="fs5-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="form-section">
+
+                    <h3 class="form-header title fz-C">使用權益<em>*</em></h3>
+
+                    <ul class="form-body">
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">申請新創會員</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs6-1" name="fs6">
+                                        <label for="fs6-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs6-2" name="fs6">
+                                        <label for="fs6-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs6-3" name="fs6">
+                                        <label for="fs6-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs6-4" name="fs6">
+                                        <label for="fs6-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs6-5" name="fs6">
+                                        <label for="fs6-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs6-6" name="fs6">
+                                        <label for="fs6-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">申請登錄平台</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs7-1" name="fs7">
+                                        <label for="fs7-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs7-2" name="fs7">
+                                        <label for="fs7-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs7-3" name="fs7">
+                                        <label for="fs7-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs7-4" name="fs7">
+                                        <label for="fs7-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs7-5" name="fs7">
+                                        <label for="fs7-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs7-6" name="fs7">
+                                        <label for="fs7-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">系統問題</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs8-1" name="fs8">
+                                        <label for="fs8-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs8-2" name="fs8">
+                                        <label for="fs8-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs8-3" name="fs8">
+                                        <label for="fs8-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs8-4" name="fs8">
+                                        <label for="fs8-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs8-5" name="fs8">
+                                        <label for="fs8-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs8-6" name="fs8">
+                                        <label for="fs8-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+                        <li>
+                            <div class="form-item compact">
+                                <span class="field">其他</span>
+                                <ul class="group">
+                                    <li>
+                                        <input type="checkbox" id="fs9-1" name="fs9">
+                                        <label for="fs9-1">選項1及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs9-2" name="fs9">
+                                        <label for="fs9-2">選項2及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs9-3" name="fs9">
+                                        <label for="fs9-3">選項3及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs9-4" name="fs9">
+                                        <label for="fs9-4">選項4及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs9-5" name="fs9">
+                                        <label for="fs9-5">選項5及其說明文字</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="fs9-6" name="fs9">
+                                        <label for="fs9-6">選項6及其說明文字</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <span class="remark">註解文字放這邊，如果需要的話</span> -->
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <div class="form-section">
+                    <h3 class="form-header title fz-D">基本資料 <em>*</em></h3>
+                    <ul class="form-body">
+                        <li>
+                            <div class="form-item">
+                                <span class="field">姓名<em>*</em></span>
+                                <input type="text">
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="form-item">
+                                <span class="field">聯絡電話<em>*</em></span>
+                                <input type="tel">
+                            </div>
+
+                            <span class="remark">資訊更新完成回報或相關問題聯繫，敬請正確填寫聯絡電話</span>
+                        </li>
+                        <li>
+                            <div class="form-item">
+                                <span class="field">Email<em>*</em></span>
+                                <input type="text">
+                            </div>
+                            <span class="remark">資訊更新完成回報或相關問題聯繫，敬請正確填寫Email</span>
+                        </li>
+                        <li>
+                            <div class="form-item">
+                                <span class="field">公司名稱<em>*</em></span>
+                                <input type="text">
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="form-item">
+                                <span class="field">公司統編<em>*</em></span>
+                                <input type="text">
+                            </div>
+
+                        </li>
+                        <li>
+                            <div class="form-item">
+                                <span class="field">需求及建議</span>
+                                <textarea name="" id="" cols="10" rows="5"></textarea>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <div class="form-item">
+                                <span class="field">是否同意隱私條款</span>
+                                <input type="checkbox" id="privacy" name="privacy">
+                                <label for="privacy">我同意，財團法人工業技術研究院的 《個人資料蒐集、處理及利用之告知暨同意條款》於頁面最下方顯示)。</label>
+                            </div>
+
+                        </li>
+                        <li class="btn-area">
+                            <button class="submit">送出</button>
+
+                        </li>
+
+
+
+                    </ul>
+
+
+
+
+                </div>
+
+                <div class="form-section privacy-text">
+                    <h3 class="form-header title fz-D">個人資料蒐集、處理及利用之告知暨同意條款 <em>*</em></h3>
+                    <article class="edit">
+                        國家發展委員會 蒐集個人資料告知事項暨個人資料提供同意書 國家發展委員會委託計畫執行單位-台北市電腦商業同業公會辦理亞洲‧矽谷2.0-數位創新整合平臺計畫(以下簡稱本計畫)，因應個人資料保護法及相關個人資料保護規定，在向您蒐集個人資料之前，依法向您告知下列事項，<strong>當您按下「送出」，表示您已閱讀、瞭解並同意接受本同意書之所有內容：</strong>
+                        <ul>
+                            <li>一、蒐集目的及類別 為亞洲矽谷計畫台灣新創資訊平台─新創團隊資訊更新之蒐集目的，而須獲取您下列個人資料類別：公司名稱、公司地址、負責人、聯絡人姓名、職稱、手機、E-mail、電話。</li>
+                            <li> 二、個人資料利用之期間、地區、對象及方式 您的個人資料，除涉及國際業務或活動外，將提供本機關(構)於中華民國領域，於上述蒐集目的之必要合理範圍內加以利用至前述蒐集目的消失為止。</li>
+                            <li> 三、當事人權利行使 依據個人資料保護法第3條，您可向計畫執行單位請求查詢或閱覽、製給複製本、補充或更正、停止蒐集/處理/利用或刪除您的個人資料。</li>
+                            <li>四、不提供個人資料之權益影響 如您不提供或未提供正確之個人資料，或要求停止蒐集/處理/利用/刪除個人資料、服務訊息的取消訂閱，本機關(構)將無法為您提供蒐集目的之相關服務。</li>
+                            <li> 五、各項通知服務、相關訊息之停止寄送，可透過訊息內容提供之取消訂閱連結通知。您可於上班時間聯繫計畫執行單位活動承辦人邱雅濡（電話(02)2518-2552，分機：16）。就違反本個資聲明事項之行為，請與活動承辦人反映。</li>
+
+
+
+                        </ul>
+                        <br>
+                        <strong>個人資料同意提供：</strong>
+                        <ul>
+                            <li>
+                                一、本人確已閱讀並瞭解上述告知事項，並勾選「我同意」授權貴機關(構)於所列目的之必要合理範圍內，蒐集、處理及利用本人之個人資料。
+                            </li>
+                            <li>
+                                二、本人瞭解此同意書符合個人資料保護法及相關法規之要求，並同意提供予貴機關(構)留存及日後查證使用。
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+
+            </form>
+
+
+        </div>
+
+
+
+
+
+
+
+    </div>
+
+
+
+
+<!-- start footer.html-->
+<!--footer-->
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-logo">
+            <img src="./img/startuptaiwan-copyright.svg" alt="STARTUP TAIWAN">
+        </div>
+        <div class="link-area">
+            <a href="privacy.html">隱私權政策</a>
+        </div>
+        <div class="copyright">
+            2021 © 台灣新創資訊平台. All Rights Reserved.
+        </div>
+    </div>
+
+</footer>
+<div class="mask-for-everything">
+    <i class="icon icon-43"></i>
+    <div class="share-container">
+        <div class="close-share">
+            <i class="icon icon-44"></i>
+        </div>
+        <h6 class="fz-B">分享</h6>
+        <!-- ShareThis BEGIN -->
+        <div class="sharethis-inline-share-buttons"></div>
+        <!-- ShareThis END -->
+
+    </div>
+</div>
+<!-- end footer.html-->
+<!-- start js.html-->
+<!----------------------------------------------->
+<!--------------------- END --------------------->
+<!----------------------------------------------->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/scrollnav@3.0.1/dist/scrollnav.min.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/3.0.0-beta.6/aos.js" integrity="sha512-tnNM6PPNOVfZ5sGPw6hThCrcUBeqt2mVEk3EAj8tCtuMHqbuVm5/HsZagrr8W2aaFE+6rKIByGwQbEnmodrYVg==" crossorigin="anonymous"></script>
+<script src="./js/main.js"></script>
+<script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=60764357a1081300117e3f8b&product=inline-share-buttons" async="async"></script>
+<!-- end js.html-->
+
+
+
+</body>
+
+</html>
