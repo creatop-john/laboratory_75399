@@ -3110,6 +3110,11 @@ button,
   .search-bar.scale button {
     flex: auto;
     border-radius: 0;
+    position: absolute !important;
+    width: 60px !important;
+    flex-shrink: 0 !important;
+    right: 0;
+    z-index: 9;
   }
 }
 
@@ -3119,7 +3124,7 @@ button,
     padding-left: 2em;
   }
   .search-bar.scale button {
-    width: 100px;
+    width: 80px !important;
   }
 }
 
